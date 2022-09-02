@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+find location - create and view classified listings
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          What category would you like to access?
+        </h1>
+      </legend>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Select a category that you would like to browse or create an advert in
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="" disabled selected>Select your option</option>
+          <option value="Furniture">Furniture</option>
+          <option value="Cars">Cars</option>
+          <option value="Property">Property</option>
+        </select>
+      </div>
+
+    </fieldset>
+
+    <button class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+
+  </div>
+
+</div>
+
+{% endblock %}

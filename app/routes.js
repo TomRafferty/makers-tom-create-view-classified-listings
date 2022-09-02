@@ -1,8 +1,13 @@
 const express = require('express')
 const router = express.Router()
 
-// Add your routes here - above the module.exports line
+//start
 router.get("/", (req, res) => {
     res.render("pages/LocationInput")
 });
+
+//category finder
+router.get("/select-category", (req, res) => {
+    res.render("pages/CategorySearch")
+})
 module.exports = router
