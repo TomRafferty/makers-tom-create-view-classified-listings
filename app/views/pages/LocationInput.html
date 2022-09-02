@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+find location - create and view classified listings
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                    What is your location?
+                </h1>
+            </legend>
+
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="address-town">
+                    Town or city
+                </label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2">
+            </div>
+
+        </fieldset>
+
+        <button class="govuk-button" data-module="govuk-button">
+            Continue
+        </button>
+
+    </div>
+
+</div>
+
+{% endblock %}
