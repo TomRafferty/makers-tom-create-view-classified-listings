@@ -1,13 +1,14 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-find location - create and view classified listings
+select a category - create and view classified listings
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <a href="/" class="govuk-back-link">Back</a>
     <fieldset class="govuk-fieldset">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
         <h1 class="govuk-fieldset__heading">
@@ -29,9 +30,11 @@ find location - create and view classified listings
 
     </fieldset>
 
-    <button class="govuk-button" data-module="govuk-button">
-      Continue
-    </button>
+    <a href="/select-functionality">
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </a>
 
   </div>
 

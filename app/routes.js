@@ -6,8 +6,14 @@ router.get("/", (req, res) => {
     res.render("pages/LocationInput")
 });
 
-//category finder
+//category selection
 router.get("/select-category", (req, res) => {
-    res.render("pages/CategorySearch")
+    res.render("pages/CategorySelection")
 })
+
+//functionality selection
+router.get("/select-functionality", (req, res) => {
+    res.render("pages/FunctionalitySelection")
+})
+
 module.exports = router

@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+select functionality - create and view classified listings
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="/select-category" class="govuk-back-link">Back</a>
+        <fieldset class="govuk-fieldset" id="functionality-form">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                    How would you like to use this service?
+                </h1>
+            </legend>
+
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="sort">
+                    Select the type of functionality you would like to use
+                </label>
+                <select class="govuk-select" id="sort" name="sort">
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="create-advert">Create an advert</option>
+                    <option value="browse-adverts">Browse adverts</option>
+                </select>
+            </div>
+
+            <a>
+                <button class="govuk-button" data-module="govuk-button" type="submit">
+                    Continue
+                </button>
+            </a>
+        </fieldset>
+
+    </div>
+
+</div>
+
+
+<script>
+    const thisForm = document.getElementById("functionality-form");
+    thisForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const newString = e.target.value;
+            thisForm.href = newString;
+            console.log(`new string = ${String}`);
+            console.log(`new func button a tag = ${funcButton}`);
+    });
+</script>
+
+{% endblock %}
